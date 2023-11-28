@@ -24,7 +24,7 @@ const MyProfile = () => {
                     method: "DELETE",
                 })
 
-                const newPosts = prompts.filter(p => p._id === prompt._id)
+                const newPosts = prompts.filter(p => p._id !== prompt._id)
                 setPrompts(newPosts)
             } catch (error) {
                 console.log("Error while deleting the prompt");
