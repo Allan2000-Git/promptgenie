@@ -12,6 +12,6 @@ export const POST = async(req, res)=>{
 
         return new Response(JSON.stringify(savedPrompt), { status: 201 })
     } catch (error) {
-        console.log("Couldn't save your prompt");
+        return new Response("Couldn't save your prompt", { status: 500 })
     }
 }
